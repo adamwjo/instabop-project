@@ -1,23 +1,13 @@
-import { useState } from 'react'
-import '../App.css';
-
-//components
-import Navbar from './Navbar'
-import CardContainer from './CardContainer'
-import About  from './About'
+import React from "react";
+import Header from "./Header";
+import MainContainer from "./MainContainer";
 
 function App() {
-
-  const [view, setView] = useState("Home");
-
-  console.log("rendering App")
   return (
-    <>
-      <Navbar setView={setView}/>
-      {view === "Profile" ? <CardContainer /> : null } 
-      {view === "About" ? <About /> : null}
-      {view === "Home" ? <h3>We are home page</h3> : null}
-    </>
+    <div>
+      <Header />
+      <MainContainer />
+    </div>
   );
 }
 
